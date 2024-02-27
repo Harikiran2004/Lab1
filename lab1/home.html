@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="foo.mp4" width="600px" height="500px" controls>
+        This browser doesn't suppot this type of vedio
+    </video>
+    <br>
+    <br>
+    <button type="button" onclick="play()" >Click to play</button>
+    <br>
+    <br>
+    <audio src="audio.wav" controls autoplay loop>This browser doesn't suppot this type of audio</audio>
+    
+    <script type="text/javascript">
+        function play(){
+            var vedio=document.getElementsByTagName("video")[0]
+            if(vedio.paused){
+                vedio.play();
+            }
+            else{
+                vedio.pause();
+            }
+        }
+    </script>
+</body>
+</html>
